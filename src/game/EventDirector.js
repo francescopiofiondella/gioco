@@ -24,7 +24,7 @@ export class EventDirector {
 
   update(dt) {
     const g = this.game;
-    if (this.flashT > 0) { this.flashT -= dt; g.hemi.intensity = g.hemiBase * (this.flashT > 0 ? 6 : 1); }
+    if (this.flashT > 0) { this.flashT -= dt; g.hemi.intensity = g.hemiBase * (this.flashT > 0 ? 2.5 : 1); }
     this.updateSteps(dt); this.updateSil(dt);
     const k = g.killer;
     if (g.car.driving || k.state === 'chase' || k.state === 'lost' || k.state === 'check_hide' || g.phase !== 'playing') return;
