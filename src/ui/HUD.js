@@ -130,6 +130,6 @@ export class HUD {
     this.el.stam.style.width = `${g.player.stamina}%`;
     this.setHidden(!!g.player.hiding);
     if (this.mapOpen) this.drawMap(this.mapCanvas.getContext('2d'), 560, 400);
-    if (this.dbg) this.dbg.textContent = `killer: ${g.killer.state}${g.killer.final ? ' (final)' : ''}\nalert: ${g.killer.alert.toFixed(2)} vis: ${g.killer.visible}\nmission: ${st.missionIndex}`;
+    if (this.dbg) this.dbg.textContent = `killer: ${g.killer.state}${g.killer.final ? ' (final)' : ''}\nalert: ${g.killer.alert.toFixed(2)} vis: ${g.killer.visible}\nmission: ${st.missionIndex}\ndraw calls: ${g.renderer.info.render.calls} tri: ${g.renderer.info.render.triangles}\nluminosità: ${settings.brightness}`;
   }
 }
