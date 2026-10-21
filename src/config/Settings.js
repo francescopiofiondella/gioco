@@ -1,5 +1,5 @@
 // Impostazioni persistenti (localStorage) e preset di qualità grafica.
-const KEY = 'hn_settings_v1';
+const KEY = 'hn_settings_v2';
 
 export const QUALITY = {
   low:    { trees: 0.45, leaves: 0.25, rain: 500,  pixelRatio: 1,    shadows: false, antialias: false, lamps: 3 },
@@ -9,8 +9,8 @@ export const QUALITY = {
 
 export const DEFAULTS = {
   master: 0.8, sfx: 0.9, music: 0.6,
-  sensitivity: 1, brightness: 1, fov: 75, hudScale: 1,
-  quality: 'medium', rain: false,
+  sensitivity: 1, brightness: 1.5, fov: 75, hudScale: 1,
+  quality: 'low', rain: false,
   vrLoco: 'smooth', vrTurn: 'snap', vrSnap: 30, vrVig: true, vrVigStr: 0.6,
 };
 
