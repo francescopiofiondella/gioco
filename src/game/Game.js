@@ -35,13 +35,13 @@ export class Game {
     this.renderer.toneMapping = THREE.ACESFilmicToneMapping;
     this.renderer.xr.enabled = true;
     this.scene = new THREE.Scene();
-    this.scene.background = new THREE.Color(0x1a2438);
-    this.scene.fog = new THREE.FogExp2(0x1a2438, 0.016);
+    this.scene.background = new THREE.Color(0x2c3d60);
+    this.scene.fog = new THREE.FogExp2(0x2c3d60, 0.012);
     this.camera = new THREE.PerspectiveCamera(settings.fov, innerWidth / innerHeight, 0.05, 170);
-    this.hemiBase = 2.4;
+    this.hemiBase = 5;
     this.hemi = new THREE.HemisphereLight(0x8fa4d8, 0x3a3026, this.hemiBase);
-    const moon = new THREE.DirectionalLight(0x9fb2e6, 1.1); moon.position.set(-30, 60, 20);
-    this.scene.add(this.hemi, moon);
+    const moon = new THREE.DirectionalLight(0xb4c4f0, 3); moon.position.set(-30, 60, 20);
+    this.scene.add(this.hemi, moon, new THREE.AmbientLight(0x8aa0d0, 3));
 
     this.collision = new CollisionSystem();
     this.state = new GameState(this);
